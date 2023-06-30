@@ -46,6 +46,7 @@ class BrGameModeStats:
 
     def __init__(self, data):
         self.score = data.get('score')
+        self.wins = data.get('wins')
         self.score_per_min = data.get('scorePerMin')
         self.scorePerMatch = data.get('scorePerMatch')
         self.top5 = data.get('top5')
