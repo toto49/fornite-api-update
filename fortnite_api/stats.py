@@ -46,7 +46,6 @@ class BrGameModeStats:
 
     def __init__(self, data):
         self.score = data.get('score')
-        self.wins = data.get('wins')
         self.score_per_min = data.get('scorePerMin')
         self.scorePerMatch = data.get('scorePerMatch')
         self.top5 = data.get('top5')
@@ -60,6 +59,7 @@ class BrGameModeStats:
         self.win_rate = data.get('winRate')
         self.minutes_played = data.get('minutesPlayed')
         self.players_outlived = data.get('playersOutlived')
+        self.wins = data.get('wins') #editing
         try:
             self.last_modified = datetime.strptime(data.get('lastModified'), '%Y-%m-%dT%H:%M:%S%z')
         except (ValueError, TypeError):

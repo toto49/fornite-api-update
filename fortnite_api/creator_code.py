@@ -23,4 +23,5 @@ class CreatorCode:
         self.user = Account(data.get('account')) if data.get('account') else None
         self.disabled = data.get('status', '').lower() == 'disabled'
         self.verified = data.get('verified', False)
+        self.status = data.get('status') #editing
         self.raw_data = data
