@@ -533,7 +533,7 @@ class SyncStatsEndpoints:
 
     def __init__(self, client):
         self._client = client
-        self.dic = {"season": TimeWindow.SEASON, "alltime": TimeWindow.LIFETIME} #edit by atom497
+        self.dic = {"season": TimeWindow.SEASON, "lifetime": TimeWindow.LIFETIME} #edit by atom497
     def fetch_by_name(self, name: str,
                       account_type: AccountType = AccountType.EPIC,
                       time_window: TimeWindow = TimeWindow.LIFETIME,
