@@ -1,4 +1,6 @@
-__version__ = '2.6.7'
+
+__version__ = '2.6.9'
+
 
 from .account import *
 from .aes import *
