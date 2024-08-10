@@ -128,7 +128,6 @@ class ShopTileSize(Enum):
 
 
 class CosmeticCompatibleMode(Enum):
-    ALL = 'ECosmeticCompatibleMode::MAX'
     BATTLE_ROYALE = 'ECosmeticCompatibleMode::BattleRoyale'
     LEGO = 'ECosmeticCompatibleMode::Juno'
     ROCKET_RACING = 'ECosmeticCompatibleMode::DelMar'

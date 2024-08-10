@@ -533,12 +533,12 @@ class SyncStatsEndpoints:
 
     def __init__(self, client):
         self._client = client
-
+        self.dic = {"season": TimeWindow.SEASON, "lifetime": TimeWindow.LIFETIME} #edit by atom497
     def fetch_by_name(self, name: str,
                       account_type: AccountType = AccountType.EPIC,
                       time_window: TimeWindow = TimeWindow.LIFETIME,
                       image: StatsImageType = StatsImageType.NONE) -> BrPlayerStats:
-        params = {'name': name, 'accountType': account_type.value, 'timeWindow': time_window.value,
+        params = {'name': name, 'accountType': account_type.value, 'timeWindow': self.dic[time_window].value,
                   'image': image.value}
         data = self._client.http.get('v2/stats/br/v2', params=params)
         return BrPlayerStats(data['data'])
